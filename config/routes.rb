@@ -33,5 +33,5 @@ Rails.application.routes.draw do
 
   resources :comments, only: [:index, :show, :new, :create]
 
-  resources :measure_units, only: :index
+  resources :measure_units, only: [:index, :new, :create]
 end
