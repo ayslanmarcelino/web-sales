@@ -1,6 +1,12 @@
 <div class="row col-md-12">
   <h4><%= t('measure_units.components.layout.resource') %></h4>
   <div>
+    <%= render(layout: 'layouts/components/filter/body') do %>
+      <%= search_form_for(@query, url: measure_units_path) do |form| %>
+        <%= render(partial: 'measure_units/components/filters', locals: { form: form }) %>
+        <%= render(partial: 'layouts/components/filter/footer', locals: { form: form }) %>
+      <% end %>
+    <% end %>
     <div class="pull-right mb-2">
       <% if can?(:create, MeasureUnit) %>
         <%= link_to(new_measure_unit_path, class: 'btn btn-sm -transparent-standard') do %>
