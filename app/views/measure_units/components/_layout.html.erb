@@ -1,0 +1,12 @@
+<div>
+  <h4>
+    <%= t("application.#{action_header}") %>
+  </h4>
+</div>
+<div>
+  <%= render partial: 'layouts/components/errors', locals: { resource: @measure_unit } %>
+  <%= form_with(model: @measure_unit) do |form| %>
+    <%= render partial: 'measure_units/components/form', locals: { form: form } %>
+    <%= render partial: 'layouts/action_buttons', locals: { url: measure_units_path, action: action } %>
+  <% end %>
+</div>
