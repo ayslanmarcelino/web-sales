@@ -19,4 +19,7 @@
 #
 class MeasureUnit < ApplicationRecord
   belongs_to :enterprise
+
+  validates :description, :abbreviation, presence: true
+  validates :description, :abbreviation, uniqueness: { scope: :enterprise_id }
 end

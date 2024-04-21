@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class MeasureUnitsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @query, @measure_units = Common::Index.call(
       klass: MeasureUnit,
