@@ -1,0 +1,10 @@
+<%=
+  render(
+    partial: 'layouts/components/index/comments',
+    locals: {
+      resource_name: @user.person.name,
+      resource: @user,
+      url: admin_user_path(@user)
+    }
+  )
+%>

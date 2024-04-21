@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    attributes:
+      white_label:
+        id: Código
+        kind_cd: Tipo
+        active: Ativo
+        description: Descrição
+        created_at: Criado em
+        updated_at: Atualizado em

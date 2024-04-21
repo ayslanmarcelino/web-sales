@@ -1,0 +1,37 @@
+pt-BR:
+  activerecord:
+    attributes:
+      person:
+        id: Código
+        document_number: CPF/CNPJ
+        owner: Tipo
+        owner_type: Tipo
+        owner_id: ID do tipo
+        enterprise: Empresa
+        name: Nome completo
+        nickname: Apelido
+        trade_name: Nome fantasia
+        birth_date: Data de nascimento
+        roles: Regras de usuário
+        marital_status_cd: Estado civil
+        marital_status_list:
+          single: Solteiro(a)
+          married: Casado(a)
+          divorced: Divorciado(a)
+          widowed: Viúvo(a)
+        kind_cd: Tipo
+        kind_list:
+          person: Pessoa física
+          company: Pessoa jurídica
+        telephone_number: Telefone
+        cell_number: Celular
+        identity_document_issuing_agency: Órgão expedidor
+        identity_document_number: Documento de identificação
+        identity_document_type: Tipo de documento de identificação
+        cnh_expires_at: Data de vencimento
+        cnh_record: Registro CNH
+        cnh_number: Número CNH
+        cnh_type: Categoria CNH
+        cnh_issuing_state: Estado expedidor CNH
+        created_at: Criado em
+        updated_at: Atualizado em

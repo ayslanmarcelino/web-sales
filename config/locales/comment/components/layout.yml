@@ -1,0 +1,6 @@
+pt-BR:
+  comments:
+    components:
+      layout:
+        resource: Comentário
+        new: Novo comentário

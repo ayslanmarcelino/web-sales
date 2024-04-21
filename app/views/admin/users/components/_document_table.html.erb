@@ -1,0 +1,40 @@
+<table class="table">
+  <tbody>
+    <tr>
+      <th><%= t('activerecord.attributes.person.document_number') %></th>
+      <td><%= formatted(@user.person.document_number) %></td>
+    </tr>
+    <tr>
+      <th><%= t('activerecord.attributes.person.identity_document_type') %></th>
+      <td><%= @user.person.identity_document_type.upcase %></td>
+    </tr>
+    <tr>
+      <th><%= t('activerecord.attributes.person.identity_document_issuing_agency') %></th>
+      <td><%= @user.person.identity_document_issuing_agency %></td>
+    </tr>
+    <tr>
+      <th><%= t('activerecord.attributes.person.identity_document_number') %></th>
+      <td><%= @user.person.identity_document_number %></td>
+    </tr>
+    <tr>
+      <th><%= t('activerecord.attributes.person.cnh_number') %></th>
+      <td><%= @user.person.cnh_number %></td>
+    </tr>
+    <tr>
+      <th><%= t('activerecord.attributes.person.cnh_record') %></th>
+      <td><%= @user.person.cnh_record %></td>
+    </tr>
+    <tr>
+      <th><%= t('activerecord.attributes.person.cnh_type') %></th>
+      <td><%= @user.person.cnh_type %></td>
+    </tr>
+    <tr>
+      <th><%= t('activerecord.attributes.person.cnh_issuing_state') %></th>
+      <td><%= @user.person.cnh_issuing_state %></td>
+    </tr>
+    <tr>
+      <th><%= t('activerecord.attributes.person.cnh_expires_at') %></th>
+      <td><%= l(@user.person.cnh_expires_at, default: '') %></td>
+    </tr>
+  </tbody>
+</table>

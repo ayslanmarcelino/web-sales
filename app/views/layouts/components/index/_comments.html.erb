@@ -1,0 +1,37 @@
+<div class="row col-md-12">
+  <h4><%= t('comments.components.layout.resource').pluralize %> do <%= resource_name %></h4>
+</div>
+<div class="row mt-2">
+  <div class="col-md-12 col-lg-12">
+    <div class="p-4">
+      <% if can?(:create, Comment) && resource != current_user %>
+        <%= form_with(model: Comment) do |form| %>
+          <div class="form-outline mb-4">
+            <%= form.text_area :description, class: 'form-control', placeholder: t('comments.components.layout.new') %>
+            <%= hidden_field_tag(:resource_id, resource.id) %>
+            <%= hidden_field_tag(:resource_type, resource.class.name) %>
+            <%= render partial: 'layouts/action_buttons', locals: { url: url, action: :create } %>
+          </div>
+        <% end %>
+      <% end %>
+
+      <% resource.comments.includes([author: :person]).where(enterprise: current_user.current_enterprise).order(created_at: :desc).each do |comment| %>
+        <div class="comments">
+          <div class="card mb-4">
+            <div class="card-body">
+              <p><%= text_with_bullet(comment.description) %></p>
+
+              <div class="d-flex justify-content-between">
+                <p class="small mb-0"><%= comment.author.person.name %></p>
+                <div class="d-flex flex-row align-items-center">
+                  <p class="small text-muted mb-0"><%= l(comment.created_at, format: :long) %></p>
+                  <i class="far fa-thumbs-up ms-2 fa-xs text-black"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

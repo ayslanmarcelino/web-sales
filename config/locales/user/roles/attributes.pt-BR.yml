@@ -1,0 +1,17 @@
+pt-BR:
+  activerecord:
+    attributes:
+      user/role:
+        id: Código
+        kind_cd: Perfil
+        manager_id: Gestor
+        user_id: Usuário
+        enterprise: Empresa
+        user: Usuário
+        kinds:
+          admin_master: Administrador master
+          owner: Proprietário
+          viewer: Visualizador
+        created_by: Criado por
+        created_at: Criado em
+        updated_at: Atualizado em

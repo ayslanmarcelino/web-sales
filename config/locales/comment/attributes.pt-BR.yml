@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    attributes:
+      comment:
+        id: Código
+        resource: Local
+        author: Autor
+        description: Descrição
+        enterprise: Empresa
+        created_at: Criado em
+        updated_at: Atualizado em

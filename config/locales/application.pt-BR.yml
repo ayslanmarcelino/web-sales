@@ -1,0 +1,23 @@
+pt-BR:
+  application:
+    update_action: Atualizado
+    create_action: Criado
+    disable_action: Desativado
+    activate_action: Ativo
+    destroy_action: Excluído
+    cancel: Cancelar
+    back: Voltar
+    edit: Editar
+    destroy: Excluir
+    activate: Ativar
+    disable: Desativar
+    filter: Filtrar
+    clear: Limpar
+    search: Buscar
+    only_active: Apenas ativos
+    only_disabled: Apenas desativados
+    new: Novo
+    create: Criar
+    update: Atualizar
+    editing: Você está editando
+    generate_pdf: Gerar PDF

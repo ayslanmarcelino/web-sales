@@ -1,0 +1,31 @@
+<table class="table">
+  <tbody>
+    <tr>
+      <th><%= t('activerecord.attributes.user.email') %></th>
+      <td><%= @user.email %></td>
+    </tr>
+    <% @user.person.contacts.each_with_index do |contact, index| %>
+      <table class="table">
+        <tbody>
+          <tr>
+          <h6>Contato #<%= index + 1 %></h6>
+            <th><%= t('activerecord.attributes.contact.cell_number') %></th>
+            <td><%= contact.cell_number %></td>
+          </tr>
+          <tr>
+            <th><%= t('activerecord.attributes.contact.telephone_number') %></th>
+            <td><%= contact.telephone_number %></td>
+          </tr>
+          <tr>
+            <th><%= t('activerecord.attributes.contact.email') %></th>
+            <td><%= contact.email %></td>
+          </tr>
+          <tr>
+            <th><%= t('activerecord.attributes.contact.observation') %></th>
+            <td><%= contact.observation %></td>
+          </tr>
+        </tbody>
+      </table>
+    <% end %>
+  </tbody>
+</table>

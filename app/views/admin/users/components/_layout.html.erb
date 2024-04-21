@@ -1,0 +1,19 @@
+<div>
+  <h4>
+    <%= t("application.#{action_header}") %>
+    <%= "- #{@user.person.name}" if action_header == 'editing' %>
+  </h4>
+</div>
+<div>
+  <%= render partial: 'layouts/components/errors',
+             locals: { resource: @user } %>
+  <%= form_with(model: [:admin, @user]) do |form| %>
+    <%= form.fields_for :person do |person_form| %>
+      <%= person_form.fields_for :address do |address_form| %>
+        <%= render partial: 'admin/users/components/form',
+                   locals: { form: form, person_form: person_form, address_form: address_form } %>
+        <%= render partial: 'layouts/action_buttons', locals: { url: admin_users_path, action: action } %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

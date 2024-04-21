@@ -1,0 +1,15 @@
+<div>
+  <h4>
+    <%= t("application.#{action_header}") %>
+    <%= "- (#{@role.translated_kind} - #{@role.user.person.name})" if action_header == 'editing' %>
+  </h4>
+</div>
+<div>
+  <%= render partial: 'layouts/components/errors',
+             locals: { resource: @role } %>
+  <%= form_with(model: @role) do |form| %>
+    <%= render partial: 'user/roles/components/form',
+               locals: { form: form } %>
+    <%= render partial: 'layouts/action_buttons', locals: { url: admin_users_path, action: action } %>
+  <% end %>
+</div>

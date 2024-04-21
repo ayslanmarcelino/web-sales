@@ -1,0 +1,8 @@
+'pt-BR':
+  activerecord:
+    errors:
+      messages:
+        blank: não pode ficar em branco
+        taken: já está em uso
+        greater_than_or_equal_to: deve ser depois de %{count}
+        less_than_or_equal_to: deve ser antes de %{count}

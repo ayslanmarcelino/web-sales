@@ -1,0 +1,21 @@
+pt-BR:
+  activerecord:
+    attributes:
+      enterprise:
+        id: Código
+        email: E-mail
+        document_number: CNPJ
+        active: Ativo
+        name: Razão Social
+        trade_name: Nome fantasia
+        opening_date: Data de abertura da empresa
+        representative_name: Nome completo
+        representative_document_number: CPF
+        identity_document_type: Tipo do documento de identificação
+        identity_document_number: Número do documento de identificação
+        identity_document_issuing_agency: Órgão expedidor do documento de identificação
+        birth_date: Data de nascimento
+        white_label: White Label
+        created_by: Criado por
+        created_at: Criado em
+        updated_at: Atualizado em

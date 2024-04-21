@@ -1,0 +1,13 @@
+pt-BR:
+  activerecord:
+    models:
+      white_label: White Label
+      contact: Contato
+      user: Usuário
+      all_users: Usuário
+      admin/user: Usuário
+      user/role: Regra de usuário
+      enterprise: Empresa
+      person: Pessoa
+      comment: Comentário
+      platform_comment: Comentário

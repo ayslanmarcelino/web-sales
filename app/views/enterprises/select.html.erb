@@ -1,0 +1,33 @@
+<div class="profile-selection">
+  <h1>Escolha seu perfil</h1>
+  <div class="profiles">
+    <% if enterprises.size.positive? %>
+      <% enterprises.uniq.each do |enterprise| %>
+        <%=
+          link_to(
+            update_current_enterprise_admin_user_path(current_user, change_enterprise: { id: enterprise.id }),
+            data: { turbo_method: :patch }
+          ) do
+        %>
+          <div class="profile">
+            <div>
+              <b>
+                <%= I18n.t(current_user.roles.where(enterprise: enterprise).map(&:kind), scope: 'activerecord.attributes.user/role.kinds').join(' / ') %>
+              </b>
+            </div>
+            <div class="mt-5">
+              <%= enterprise.trade_name %>
+            </div>
+            <div>
+              <%= CNPJ.new(enterprise.document_number).formatted %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% else %>
+      <div class="text-center">
+        Você não possui empresa vinculada.
+      </div>
+    <% end %>
+  </div>
+</div>

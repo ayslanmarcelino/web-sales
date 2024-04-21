@@ -1,0 +1,152 @@
+.btn {
+  &.-standard {
+    background-color: $primary-color;
+    color: $white;
+
+    &:hover {
+      background-color: darken($primary-color, 15%);
+    }
+  }
+
+  &.-danger {
+    color: $danger-color;
+
+    &:hover {
+      color: darken($danger-color, 15%);
+    }
+  }
+
+  &.-success {
+    color: $success-color;
+
+    &:hover {
+      color: darken($success-color, 15%);
+    }
+  }
+
+  &.-bg-primary {
+    background-color: $primary-color;
+    color: $white;
+
+    &:hover {
+      background-color: darken($primary-color, 15%);
+    }
+  }
+
+  &.-bg-danger {
+    background-color: $danger-color;
+    color: $white;
+
+    &:hover {
+      background-color: darken($danger-color, 15%);
+    }
+  }
+
+  &.-transparent-standard {
+    border-color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+
+  &.-transparent-danger {
+    border-color: $primary-color;
+    color: $primary-color;
+
+    &:hover {
+      color: $white;
+      border-color: $danger-color;
+      background-color: $danger-color;
+    }
+  }
+
+  &.-transparent-success {
+    border-color: $primary-color;
+    color: $primary-color;
+
+    &:hover {
+      color: $white;
+      border-color: $success-color;
+      background-color: $success-color;
+    }
+  }
+}
+
+.bi {
+  color: $icon-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.pull-right {
+  float: right;
+}
+
+.nav {
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+a.nav-link.info-card {
+  color: $primary-color;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $white;
+  }
+}
+
+.nav-link.active {
+  background-color: $primary-color !important;
+
+  a {
+    color: $white;
+  }
+}
+
+.form-control {
+  font-size: 0.9rem;
+}
+
+.pagination {
+  .page-item {
+    a.page-link {
+      font-size: 0.8rem;
+      color: $primary-color;
+    }
+  }
+
+  .page-item.active {
+    a.page-link {
+      background: $primary-color;
+      color: $white;
+      border-color: $primary-color;
+    }
+  }
+}
+
+.required-empty {
+  border-color: $dark-red;
+  color: $dark-red;
+}
+
+.required-error {
+  font-size: 80%;
+  color: $dark-red;
+}
+
+label.required-label::after {
+  content: ' *';
+  color: $dark-red;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.modal-backdrop.fade.show {
+  z-index: -1;
+}
