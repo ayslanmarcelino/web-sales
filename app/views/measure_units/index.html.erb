@@ -1,0 +1,31 @@
+<div class="row col-md-12">
+  <h4><%= t('measure_units.components.layout.resource') %></h4>
+  <div class="table-wrap">
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <th><%= t('.id') %></th>
+          <th><%= t('.description') %></th>
+          <th><%= t('.abbreviation') %></th>
+          <th><%= t('.created_at') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @measure_units.each do |measure_unit| %>
+          <tr>
+            <td><%= measure_unit.id %></td>
+            <td><%= measure_unit.description %></td>
+            <td><%= measure_unit.abbreviation %></td>
+            <td><%= l(measure_unit.created_at) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<%=
+  render partial: 'layouts/components/index/footer',
+         locals: {
+           resource: @measure_units
+         }
+%>
