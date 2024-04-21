@@ -1,5 +1,15 @@
 <div class="row col-md-12">
   <h4><%= t('measure_units.components.layout.resource') %></h4>
+  <div>
+    <div class="pull-right mb-2">
+      <% if can?(:create, MeasureUnit) %>
+        <%= link_to(new_measure_unit_path, class: 'btn btn-sm -transparent-standard') do %>
+          <i class="bi bi-plus-circle"></i>
+          <%= t('application.new') %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
   <div class="table-wrap">
     <table class="table table-responsive">
       <thead>
