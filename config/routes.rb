@@ -32,4 +32,6 @@ Rails.application.routes.draw do
   end
 
   resources :comments, only: [:index, :show, :new, :create]
+
+  resources :measure_units, only: :index
 end
