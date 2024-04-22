@@ -57,12 +57,15 @@ class Ability
       can(:read, Comment, enterprise: @enterprise)
       can(:create, Comment)
       can(:comments, User, roles: { enterprise: @enterprise })
+      can(:read, MeasureUnit, enterprise: @enterprise)
+      can(:create, MeasureUnit)
     end
 
     def viewer_abilities
       can([:read, :comments], User, roles: { enterprise_id: @enterprise.id, kind_cd: User::Role::USER_KINDS.map(&:to_s) })
       can(:read, User::Role, enterprise: @enterprise, kind_cd: User::Role::USER_KINDS.map(&:to_s))
       can(:read, Comment, enterprise: @enterprise)
+      can(:read, MeasureUnit, enterprise: @enterprise)
     end
   end
 end

@@ -23,3 +23,14 @@
     </div>
   <% end %>
 <% end %>
+
+<% if can?(:read, MeasureUnit) %>
+  <%= link_to(measure_units_path, class: "#{'active-menu' if request.path.include?(measure_units_path)} list-item-menu list-group-item-action", id: 'measure_unit') do %>
+    <div class="menu">
+      <div class="icon">
+        <i class="bi bi-rulers"></i>
+      </div>
+      <span><%= t('measure_units.components.layout.resource') %></span>
+    </div>
+  <% end %>
+<% end %>

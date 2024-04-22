@@ -1,0 +1,7 @@
+pt-BR:
+  measure_units:
+    index:
+      id: Código
+      description: Descrição
+      abbreviation: Abreviação
+      created_at: Criado em

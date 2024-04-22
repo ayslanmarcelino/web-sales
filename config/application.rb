@@ -11,7 +11,7 @@ module Rails7Template
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
     config.time_zone = 'America/Maceio'
-    config.i18n.available_locales = ['pt-BR']
+    config.i18n.available_locales = ['en', 'pt-BR']
     config.i18n.default_locale = :'pt-BR'
     config.autoload_paths += %W(#{config.root}/lib)
 
